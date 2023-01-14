@@ -658,6 +658,7 @@ const mapingCharacters = () => {
   ))
 };
 
+mapingCharacters();
 /*console.log(mapingCharacters())*/
 
 /*Si pensamos como buen programador habría que pensar en la escalabilidad de la función que estamos escribiendo e introducir parametros
