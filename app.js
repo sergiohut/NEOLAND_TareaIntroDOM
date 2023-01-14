@@ -646,9 +646,48 @@ const characters = {
   ],
 };
 
+
+const mapingCharacters = () => {
+  return characters.results.map((character) =>({
+    name: character.name,
+    status: character.status,
+    origin: character.origin.name,
+    location: character.location.name,
+    image: character.image,
+  }
+  ))
+};
+
+/*console.log(mapingCharacters())*/
+
+/*Si pensamos como buen programador habría que pensar en la escalabilidad de la función que estamos escribiendo e introducir parametros
+para de esta forma poder aplicar la función a otros objetos. 
+
+Incluso podría ir más allá y convertir las propiedades del character que queremos devolver de la función en otro parametro, pero no tengo muy claro como se podría hacer. 
+
+const mapingCharacters = (list,propertyName) => {
+  return list.propertyName.map((character) =>({
+    name: character.name,
+    status: character.status,
+    origin: character.origin,
+    location: character.location,
+    image: character.image,
+  }
+  ))
+}
+
+
+const mapingCharacters (list) => {
+  return list.map((character)) =>(
+    name
+  )
+
+
+}
+
 //COMENTAR TODO LO DE ABAJO Y HACEDLO ANTES DE ESTA LINEA
 //Ejemplo:
-const swCharacters = {
+/*const swCharacters = {
   info: {
     totalCharacters: 714,
     page: 1,
@@ -809,3 +848,4 @@ const mapCharacters = () => {
 };
 
 mapCharacters();
+*/
