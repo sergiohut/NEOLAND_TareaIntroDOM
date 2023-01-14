@@ -658,7 +658,17 @@ const mapingCharacters = () => {
   ))
 };
 
-mapingCharacters();
+const characterFeatureList.mapingCharacters();
+/* Almacenamos el array de objetos mapeados en una variable para poder recorrerla */ 
+
+const container = document.querySelector("#container");
+/* Declaramos una variable para trabajar con nuestro HTML a través del DOM*/
+
+const printTemplate = () = > {
+  characterFeatureList.foreach((character)) => (container.innerHTML += character)
+};
+
+
 /*console.log(mapingCharacters())*/
 
 /*Si pensamos como buen programador habría que pensar en la escalabilidad de la función que estamos escribiendo e introducir parametros
