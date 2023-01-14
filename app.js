@@ -661,12 +661,24 @@ const mapingCharacters = () => {
 const characterFeatureList = mapingCharacters();
 /* Almacenamos el array de objetos mapeados en una variable para poder recorrerla */ 
 
-const container = document.querySelector("#container");
+const containerPrint = document.querySelector("#container");
 /* Declaramos una variable para trabajar con nuestro HTML a través del DOM*/
 
+
 const printTemplate = () => {
-  characterFeatureList.foreach((character) => (container.innerHTML += character))
+  characterFeatureList.forEach((character) => 
+  (container.innerHTML += `
+    <div class="card">
+      <h2>${character.name}</h2>
+      <h3>Living Status: ${character.status}</h3>
+      <p>Origin\´s Planet: ${character.origin}</p>
+      <p>Current Location: ${character.location}</p>
+      <img src="${character.image}" alt="">`
+  ))
+
 };
+
+printTemplate();
 
 
 /*console.log(mapingCharacters())*/
